@@ -44,6 +44,7 @@ body {
   line-height: var(--line-height);
   color: var(--slate);
   background-color: var(--white);
+  min-width: 320px;
 }
 
 address {
@@ -617,7 +618,7 @@ footer .wrapper-f > .subscribe div > button svg {
   }
   /*TODO*/
 }
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 420px) {
   main .solution h1 {
     font-size: 36px;
   }
@@ -646,6 +647,16 @@ footer .wrapper-f > .subscribe div > button svg {
   }
   footer .wrapper-f > .wrapper p {
     max-width: 100%;
+  }
+}
+@media (min-resolution: 192dpi) {
+  main .solution {
+    background: linear-gradient(
+        to bottom,
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url('../images/people-office-1.webp') no-repeat center / cover;
   }
 }
 /*media*/
