@@ -95,7 +95,7 @@ header > .blocks-wrapper {
   -webkit-flex-direction: row;
   flex-direction: row;
   -webkit-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   -webkit-justify-content: space-between;
   justify-content: space-between;
   -webkit-align-content: flex-start;
@@ -114,7 +114,7 @@ header > .blocks-wrapper nav {
 
   display: flex;
   flex-direction: row;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   justify-content: normal;
   align-items: center;
 }
@@ -456,9 +456,7 @@ main .portfolio .work .work-title-block {
   border: 1px solid #e7e9fc;
   border-top: none;
 }
-main .portfolio .work:nth-child(n) {
-  margin-bottom: 48px;
-}
+
 main .portfolio .work h3 {
   font-size: 20px;
   font-weight: var(--bold-font);
@@ -497,6 +495,9 @@ footer .wrapper-f > .wrapper p {
   color: var(--cloud);
   letter-spacing: 0.32px;
 }
+footer .wrapper-f > .social {
+  margin-right: 80px;
+}
 footer .wrapper-f > .social p {
   font-weight: 500;
   font-size: 16px;
@@ -531,6 +532,132 @@ footer .wrapper-f > .social ul li a svg {
   fill: var(--cloud);
 }
 footer .wrapper-f > .social ul li a svg use {
-  scale: 140%;
+  scale: 100%;
+}
+footer .wrapper-f > .subscribe {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+footer .wrapper-f > .subscribe div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+footer .wrapper-f > .subscribe div > button {
+  display: inline-flex;
+  align-items: center;
+}
+footer .wrapper-f > .subscribe div > button svg {
+  margin-left: 10px;
 }
 /*footer*/
+/*media*/
+@media screen and (max-width: 1200px) {
+  .container {
+    width: 100%;
+  }
+  header {
+    padding: 0 16px;
+  }
+  header > .blocks-wrapper address ul {
+    gap: 0px;
+    flex-direction: column;
+  }
+  header > .blocks-wrapper address ul {
+    margin: 16px 0;
+    gap: 10px;
+  }
+  header > .blocks-wrapper address ul li a {
+    padding: 0px 0;
+  }
+  header > .blocks-wrapper nav {
+    margin-top: 10px;
+  }
+  /*main*/
+  main .parts ul {
+    flex-wrap: wrap;
+  }
+  main .parts .block {
+    flex-basis: calc(50% - 12px);
+  }
+  .persons {
+    padding: 0 110px;
+  }
+  main .portfolio ul li {
+    width: calc((100% - 48px) / 2);
+  }
+  /*main*/
+  /*footer*/
+  footer .wrapper-f {
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: 70px;
+    padding: 0 108px;
+  }
+  footer .wrapper-f div {
+    flex-basis: calc((100% - 24px) / 2);
+  }
+  footer .wrapper-f > .wrapper {
+    margin-right: 24px;
+  }
+  footer .wrapper-f > .social {
+    margin-right: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .persons {
+    padding: 0;
+  }
+}
+@media screen and (max-width: 700px) {
+  /*TODO*/
+  header > .blocks-wrapper nav ul,
+  .addrs {
+  }
+  /*TODO*/
+}
+@media screen and (max-width: 320px) {
+  main .solution h1 {
+    font-size: 36px;
+  }
+  main .parts .block {
+    flex-basis: 100%;
+  }
+  main .team ul {
+    row-gap: 72px;
+  }
+  main .portfolio ul li {
+    width: 100%;
+  }
+  footer .wrapper-f {
+    padding: 0 10px;
+    text-align: center;
+  }
+  footer .wrapper-f > .wrapper,
+  footer .logo {
+    margin: 0px;
+  }
+  footer .wrapper-f div {
+    flex-basis: 100%;
+  }
+  footer .wrapper-f > .social ul {
+    justify-content: center;
+  }
+  footer .wrapper-f > .wrapper p {
+    max-width: 100%;
+  }
+}
+/*media*/
+/*print*/
+@media print {
+  body {
+    max-width: 600px;
+    color: black;
+    background: var(--white);
+  }
+  img {
+    display: none;
+  }
+}
+/*print*/
