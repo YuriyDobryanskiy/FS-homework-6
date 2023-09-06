@@ -372,7 +372,6 @@ footer a:hover {
 .person p,
 main .portfolio .work p {
   letter-spacing: 0.32px;
-  margin-bottom: 20px;
 }
 
 .person p {
@@ -973,6 +972,18 @@ footer {
   .portfolio ul {
     justify-content: center;
   }
+
+  .team .persons {
+    margin: auto;
+    row-gap: 64px;
+    width: 75%;
+  }
+
+  footer .container {
+    width: 600px;
+    padding: 0;
+    margin: auto;
+  }
 }
 
 
@@ -993,8 +1004,14 @@ footer {
   .first-main-link {
     padding: 24px 0;
   }
+
 }
 
+@media screen and (max-width:880px) {
+  .team .persons {
+    width: 100%;
+  }
+}
 
 @media screen and (max-width:768px) {
   .solution {
@@ -1038,8 +1055,6 @@ footer {
 
   footer .container {
     width: 500px;
-    padding: 0;
-    margin: auto;
   }
 
   footer .logo {
@@ -1100,35 +1115,14 @@ footer {
     width: 100%;
   }
 
-
-
   .order-popup>.wrapper {
     width: 90%;
   }
 
-  footer .container {
-    width: 100%;
-    padding: 0 15px;
-  }
+
 }
 
-@media screen and (max-width:425px) {
-  .parts ul {
-    gap: 72px;
-  }
-
-  .portfolio ul li {
-    width: 100%;
-  }
-
-  .portfolio .work img {
-    width: 100%;
-  }
-
-  .portfolio ul {
-    row-gap: 48px;
-  }
-
+@media screen and (max-width:542px) {
   footer {
     padding: 96px 0px;
     text-align: center;
@@ -1163,6 +1157,25 @@ footer {
 
   .wrapper-f>.subscribe button {
     margin: auto;
+  }
+
+}
+
+@media screen and (max-width:425px) {
+  .parts ul {
+    gap: 72px;
+  }
+
+  .portfolio ul li {
+    width: 100%;
+  }
+
+  .portfolio .work img {
+    width: 100%;
+  }
+
+  .portfolio ul {
+    row-gap: 48px;
   }
 
   .main-link a::after {
