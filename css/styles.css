@@ -60,6 +60,7 @@ p {
 
 ul li {
   list-style-type: none;
+
 }
 
 a {
@@ -180,6 +181,14 @@ footer a:hover {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.addrs .addrs-mail {
+  display: inherit;
+}
+
+.addrs .addrs-mail a {
+  font-weight: var(--normal-font);
+}
+
 .navigavion-menu a:hover,
 .addrs-mail a:hover,
 .navigavion-menu a:focus,
@@ -200,11 +209,17 @@ footer a:hover {
   background-color: var(--ocean);
   transform: scaleX(0);
   transform-origin: left center;
-  transition: transform 0.3s ease;
+  /*transition: transform 0.3s ease;*/
 }
 
 .navigavion-menu a:hover::after {
   transform: scaleX(1);
+}
+
+.navigavion-menu .active,
+.navigavion-menu .active::after {
+  transform: scaleX(1);
+  color: #404bbf;
 }
 
 .mainLink:focus {
@@ -360,6 +375,13 @@ main .portfolio .work p {
   margin-bottom: 20px;
 }
 
+.person p {
+  margin-bottom: 8px;
+  color: var(--slate);
+  font-weight: var(--normal-font);
+  letter-spacing: 0.32px;
+}
+
 .person-social {
   display: flex;
   justify-content: center;
@@ -440,11 +462,6 @@ main .portfolio .work p {
   padding-bottom: 120px;
 }
 
-.portfolio .work {
-  border: 1px solid var(--cornflower);
-  background: var(--white);
-}
-
 .work .work-title-block {
   padding: 32px 16px;
   border: 1px solid #e7e9fc;
@@ -473,7 +490,7 @@ footer {
   flex-direction: row;
   flex-wrap: wrap;
   align-items: baseline;
-  gap: 60px;
+  gap: 80px;
 }
 
 .wrapper-f>.wrapper {
@@ -564,7 +581,7 @@ footer {
 
 .wrapper-f>.subscribe button {
   border-radius: 4px;
-  background: var(--iris);
+  background: #4d5ae5;
   display: inline-flex;
   padding: 8px 24px;
   justify-content: center;
@@ -583,8 +600,10 @@ footer {
   height: 40px;
 }
 
-.subscribe button svg {
-  margin-left: 16px;
+.subscribe button:hover,
+.subscribe button:focus {
+  background-color: #404bbf;
+  cursor: pointer;
 }
 
 /*footer*/
@@ -822,7 +841,7 @@ footer {
 }
 
 .menu-popup>.wrapper {
-  padding: 72px 24px 24px 24px;
+  padding: 72px 24px 40px 16px;
 }
 
 .menu-popup .close {
@@ -910,9 +929,6 @@ footer {
   margin-bottom: 48px;
 }
 
-.menu-popup .social {
-  margin-bottom: 20px;
-}
 
 .menu-popup .social .list {
   display: flex;
@@ -963,16 +979,19 @@ footer {
 @media screen and (max-width:900px) {
 
   .blocks-wrapper address ul {
-    gap: 0px;
+    gap: 12px;
     flex-direction: column;
   }
 
   .addrs .addrs-mail a {
-    padding: 6px 0;
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.48px;
+    padding: 0;
   }
 
   .first-main-link {
-    padding: 28px 0;
+    padding: 24px 0;
   }
 }
 
@@ -986,6 +1005,10 @@ footer {
   .team,
   .portfolio {
     padding: 96px 0;
+  }
+
+  .parts ul {
+    row-gap: 72px;
   }
 
   .parts .block,
@@ -1010,7 +1033,17 @@ footer {
   }
 
   footer {
-    padding: 96px 93px;
+    padding: 96px 0;
+  }
+
+  footer .container {
+    width: 500px;
+    padding: 0;
+    margin: auto;
+  }
+
+  footer .logo {
+    margin-right: 0;
   }
 
   .wrapper-f>.wrapper {
@@ -1071,6 +1104,11 @@ footer {
 
   .order-popup>.wrapper {
     width: 90%;
+  }
+
+  footer .container {
+    width: 100%;
+    padding: 0 15px;
   }
 }
 

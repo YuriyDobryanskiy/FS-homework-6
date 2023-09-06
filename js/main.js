@@ -16,9 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const burgerMenu = document.querySelector('.menu-popup');
     const closeBurgerButton = document.querySelector(".menu-popup .close");
     const allBody = document.querySelector("body");
-    const viewPortHeight = document.querySelector(".menu-popup .wrapper");
 
-    viewPortHeight.style.height = self.innerHeight + 'px';
     burgerButton.addEventListener("click", () => {
         burgerMenu.classList.toggle('is-open');
         allBody.classList.toggle('disable-scroll');
