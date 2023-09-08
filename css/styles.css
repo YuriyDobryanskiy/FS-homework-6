@@ -1119,10 +1119,34 @@ footer {
     width: 90%;
   }
 
+  .portfolio ul li {
+    display: flex;
+    flex-direction: column;
+  }
 
+  .portfolio ul li>.work-title-block {
+    flex-grow: 1;
+  }
+}
+
+@media screen and (max-width:600px) and (min-width:425px) {
+  .work .image-wrapper:first-child p {
+    font-size: 12px;
+    padding: 15px 20px;
+  }
 }
 
 @media screen and (max-width:542px) {
+
+  .portfolio ul {
+    min-width: 264px;
+    gap: 30px;
+  }
+
+  .portfolio ul li {
+    min-width: 264px;
+  }
+
   footer {
     padding: 96px 0px;
     text-align: center;
@@ -1190,11 +1214,12 @@ footer {
   .menu-popup .addrs-mail a {
     padding: 0;
   }
-	.menu-popup .addrs-mail a {
-		font-size: 20px;
-		line-height: 1.2;
-		letter-spacing: 0.4px;
-	}
+
+  .menu-popup .addrs-mail a {
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.4px;
+  }
 }
 
 @media screen and (max-width:320px) {
